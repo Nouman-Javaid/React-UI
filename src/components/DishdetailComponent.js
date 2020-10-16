@@ -58,10 +58,12 @@ export default class DishDetail extends Component{
 
     render() {
        
-        const dish = this.props.prop; 
+        const dish = this.props.prop;   
         return (
             <>
-                {this.renderDish(dish)}      
+            <div className="container">
+                 {this.renderDish(dish)}   
+            </div>   
             </>
         )
     }
