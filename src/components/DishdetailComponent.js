@@ -44,7 +44,7 @@ export default class DishDetail extends Component{
                             
                             <li className="list-inline-item">-- {review.author}</li>
 
-                            <li className="list-inline-item">{review.date}</li>
+                            <li className="list-inline-item">{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(review.date)))} </li>
                         </ul>
                     </div>    
                 )
