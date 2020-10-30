@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {Navbar, NavbarBrand} from 'reactstrap';
 
-import '../App.css';
 import {Dishes} from '../shared/dishes';
 import Menu from './MenuComponent';
 import DishDetail from './DishdetailComponent';
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
 
 export default class Main extends Component{
   
@@ -23,16 +23,12 @@ export default class Main extends Component{
   
   render(){
     return (
-      <div className="App">
-        <Navbar dark color="primary" >
-          <div className='container'>
-            <NavbarBrand href="Alla" >FIFA</NavbarBrand>
-          </div>
-        </Navbar>
-
+      <div>
+        <Header />  
+        {/* param 'id' received is passed as param to arrow ftn */}
         <Menu dishes = {this.state.dishes} onClick = {(dishId) => this.onDishSelect(dishId)} />   
-        <DishDetail prop = {this.state.dishes.filter( (dish) => dish.id === this.state.selectedDish )[0] }/>
-
+        <DishDetail dish = {this.state.dishes.filter( (dish) => dish.id === this.state.selectedDish )[0] }/>
+        <Footer />
       </div>
   );
   }
