@@ -7,9 +7,7 @@ function RenderDish({dish}){
                 
     if(dish != null)        
         return(       
-
             <div className="row" >
-                <div> 
                 <Card>
                     <CardImg width="100" src={dish.image} alt={dish.name} />
                     <CardBody>
@@ -17,7 +15,6 @@ function RenderDish({dish}){
                         <CardText> {dish.description} </CardText>
                     </CardBody>
                 </Card>
-                </div>
             </div>
         );
         
@@ -31,7 +28,6 @@ function RenderDish({dish}){
 function RenderComments({comments}) {
     
     if(comments != null)  
-
             return (
                 <div>
                     <h4 >Comments</h4>
