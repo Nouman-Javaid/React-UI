@@ -3,9 +3,6 @@
     margin:0px auto;
     background: #9575CD ;
     color:floralwhite;
-    margin-bottom: 2rem;
-    border-radius: .3rem;
-    height: 200px;
   }
   
 address{
@@ -14,13 +11,14 @@ address{
     color:#0f0f0f;
 }
 
-  .row-header{
+.row-header{
     margin:0px auto;
     padding:0px;
 }
 
 .row-content {
-    margin:0px auto;
+/*0: top-bottom margins set to 0. auto: browser automatically determine the left and right margins itself*/
+    margin:0px auto; 
     padding: 50px 0px 50px 0px;
     border-bottom: 1px ridge;
     min-height:400px;
